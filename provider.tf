@@ -4,9 +4,9 @@ terraform {
       source = "Snowflake-Labs/snowflake"
       version = "0.34.0"
       confconfiguration_aliases = [ 
-        snowflake.sys_admin,
-        snowflake.security_admin,
-        snowflake.account_admin
+        sys_admin,
+        security_admin,
+        account_admin
        ]
     }
   }
