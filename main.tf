@@ -6,5 +6,5 @@ resource "snowflake_role" "role" {
 resource "snowflake_database" "database" {
   provider = snowflake.sysadmin
   name                        = var.database_name
-  data_retention_time_in_days = 3
+  data_retention_time_in_days = 1
 }
