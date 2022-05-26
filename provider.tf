@@ -4,11 +4,21 @@ terraform {
     snowflake = {
       source = "Snowflake-Labs/snowflake"
       version = "0.34.0"
-      confconfiguration_aliases = [ 
-        snowflake.sysadmin,
-        snowflake.securityadmin,
-        snowflake.accountadmin
-       ]
     }
   }
+}
+
+provider "snowflake" {
+  alias = "sysadmin"
+  role  = "SYSADMIN"
+}
+
+provider "snowflake" {
+  alias = "accountadmin"
+  role = "ACCOUNTADMIN"
+}
+
+provider "snowflake" {
+  alias = "securityadmin"
+  role = "SECURITYADMIN"
 }
